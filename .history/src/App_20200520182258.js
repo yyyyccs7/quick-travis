@@ -26,15 +26,15 @@ function App() {
   const [user, setUser] = useState(null);
   const [userData, setUserData] = useState(null)
 
-  useEffect(() => {
-   firebase.auth().onAuthStateChanged(setUser);
-  }, []);
+  // useEffect(() => {
+  //  firebase.auth().onAuthStateChanged(setUser);
+  // }, []);
 
-  useEffect(() => {
-    if (!user) {
-      localStorage.setItem('user', null)
-    } 
-  }, [user])
+  // useEffect(() => {
+  //   if (!user) {
+  //     localStorage.setItem('user', null)
+  //   } 
+  // }, [user])
 
   return (
     <div className="App">
@@ -45,7 +45,7 @@ function App() {
             <Route path="/" exact component={() => <Login user={user}/>}></Route>
             <Route path="/home" exact component={() => <Home user={user}/>}></Route>
             <Route path="/account" exact component={() => <Account user={user}/>}></Route>
-            <Route path="/" render={() => <div>404 Not Found</div>}></Route>
+            <Route path="/" render={() => <div>404</div>}></Route>
           </Switch>
         </BrowserRouter>
       </MuiThemeProvider>

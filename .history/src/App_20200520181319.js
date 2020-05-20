@@ -8,8 +8,8 @@ import Account from './pages/Account'
 import Login from './pages/Login'
 
 //Firebase
-import firebase from './shared/firebase.js';
-import 'firebase/database';
+// import firebase from './shared/firebase.js';
+// import 'firebase/database';
 
 // Material UI
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
@@ -45,7 +45,7 @@ function App() {
             <Route path="/" exact component={() => <Login user={user}/>}></Route>
             <Route path="/home" exact component={() => <Home user={user}/>}></Route>
             <Route path="/account" exact component={() => <Account user={user}/>}></Route>
-            <Route path="/" render={() => <div>404 Not Found</div>}></Route>
+            <Route path="/" render={() => <div>404</div>}></Route>
           </Switch>
         </BrowserRouter>
       </MuiThemeProvider>
