@@ -23,4 +23,7 @@ it('test add new task button', () => {
     const { container } = render(<Newtask {...props} />);
     const total = getByTestId(container, "testbutton");
     expect(total.textContent).toBe("Submit");
+
+    fireEvent.click(total);
+    expect(total.textContent).toBe("Submit");
 });
